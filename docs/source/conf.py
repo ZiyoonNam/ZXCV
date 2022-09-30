@@ -30,10 +30,12 @@ release = '2.0'
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
+html_baseurl = 'https://ziyoonnam.github.io/ZXCV/'
 extensions = [
         'sphinx.ext.autodoc',
         'sphinx.ext.todo',
         'sphinx.ext.napoleon',
+        'sphinx.ext.githubpages',
 ]
 
 from recommonmark.parser import CommonMarkParser
