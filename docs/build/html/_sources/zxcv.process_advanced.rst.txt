@@ -1,0 +1,21 @@
+zxcv.process\_advanced package
+==============================
+
+Submodules
+----------
+
+zxcv.process\_advanced.module module
+------------------------------------
+
+.. automodule:: zxcv.process_advanced.module
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: zxcv.process_advanced
+   :members:
+   :undoc-members:
+   :show-inheritance:

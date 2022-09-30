@@ -1,0 +1,21 @@
+zxcv.plot package
+=================
+
+Submodules
+----------
+
+zxcv.plot.module module
+-----------------------
+
+.. automodule:: zxcv.plot.module
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: zxcv.plot
+   :members:
+   :undoc-members:
+   :show-inheritance:
