@@ -52,11 +52,11 @@ def t_cri(N, sig_level=95.):
     """Calculate a t-critical value according to the given significance level [%]
 
     :param N: sample size
-    :type N: :class: `int`
+    :type N: :class:`int`
     :param sig_level: significance level, defaults to 95.
-    :type sig_level: :class: `float`, optional
+    :type sig_level: :class:`float`, optional
     :return: t-critical value
-    :rtype: :class: `float`
+    :rtype: :class:`float`
 
     >>> zxcv.process.t_cri(20, 95)
     2.1009220402409623
