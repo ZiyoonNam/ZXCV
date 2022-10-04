@@ -57,6 +57,9 @@ def t_cri(N, sig_level=95.):
     :type sig_level: :class: `float`, optional
     :return: t-critical value
     :rtype: :class: `float`
+    :example: 
+    >>> zxcv.process.t_cri(20, 95)
+    2.1009220402409623
     """
     q = (1 - 0.01 * sig_level) * 0.5
     t_cri = scipy.stats.t.ppf(q=1-q, df=N-2)
