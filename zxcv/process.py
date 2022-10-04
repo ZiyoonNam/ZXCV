@@ -19,7 +19,7 @@ warnings.filterwarnings(action="ignore")
 
 
 def cov_xr(da1, da2, dims="time"):
-     """Calculate covariance matrix between da1 and da2.  
+    """Calculate covariance matrix between da1 and da2.  
 
     :param da1: 1-D (time) DataArray
     :type da1: :class:`xarray.DataArray`
@@ -30,7 +30,6 @@ def cov_xr(da1, da2, dims="time"):
     :return: 2-D (lat, lon) DataArray, covariance matrix.
     :rtype: :class:`xarray.DataArray`
     """
-   
     return xr.dot(da1-da1.mean(dims), da2-da2.mean(dims), dims=dims) \
         / (da1.count(dims) - 1)
 
@@ -48,3 +47,18 @@ def cor_xr(da1, da2, dims="time"):
     """
     return cov_xr(da1, da2, dims) \
         / (da1.std(dims, ddof=1) * da2.std(dims, ddof=1))
+
+def t_cri(N, sig_level=95.):
+    """Calculate a t-critical value according to the given significance level [%]
+
+    :param N: sample size
+    :type N: :class: `int`
+    :param sig_level: significance level, defaults to 95.
+    :type sig_level: :class: `float`, optional
+    :return: t-critical value
+    :rtype: :class: `float`
+    """
+    q = (1 - 0.01 * sig_level) * 0.5
+    t_cri = scipy.stats.t.ppf(q=1-q, df=N-2)
+    return t_cri
+    
